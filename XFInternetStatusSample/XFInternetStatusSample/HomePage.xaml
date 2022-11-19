@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XFInternetStatusSample.HomePage"
+    NavigationPage.HasNavigationBar="False"
+    ControlTemplate="{DynamicResource InternetConnTemplate}">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout HeightRequest="50" BackgroundColor="#2196F3">
+
+                <Label Text="Home Page"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Title"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+            </StackLayout>
+
+            <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+            <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!"
+                   FontSize="16"
+                   Padding="30,10,30,0"/>
+            <Label FontSize="16" Padding="30,24,30,0" Text="Learn more at "/>
+            <Label Text="https://xamarindevelopment.com/"
+                   FontAttributes="Bold"
+                   Padding="30,0,30,0"
+                   TextColor="Red"/>
+
+            <Button Text="Back"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="#2196F3"
+                    CornerRadius="20"
+                    Margin="0,20,0,0"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="45"
+                    Clicked="Button_Clicked"/>
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFInternetStatusSample.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--  Page Header (InternetConnection view) Template  -->
+            <ControlTemplate x:Key="InternetConnTemplate">
+                <StackLayout Spacing="0">
+                   
+                    <BoxView
+                        BackgroundColor="#2196F3"
+                        HeightRequest="55"
+                        IsVisible="{OnPlatform Android='False',
+                                               iOS='True'}" />
+
+                     <ContentPresenter />
+                    
+                </StackLayout>
+            </ControlTemplate>
+
+            <!--  Empty Template  -->
+            <ControlTemplate x:Key="EmptyTemplate">
+                <StackLayout Spacing="0">
+
+                    <BoxView
+                        BackgroundColor="#2196F3"
+                        HeightRequest="55"
+                        IsVisible="{OnPlatform Android='False',
+                                               iOS='True'}" />
+
+                    <ContentPresenter />
+
+                </StackLayout>
+            </ControlTemplate>
+
+            <!--  Online Template  -->
+            <ControlTemplate x:Key="OnlineTemplate">
+                <StackLayout Spacing="0">
+
+                    <BoxView
+                        BackgroundColor="#2196F3"
+                        HeightRequest="55"
+                        IsVisible="{OnPlatform Android='False',
+                                               iOS='True'}" />
+
+                    <Frame
+                        x:Name="FrameBackground"
+                        Padding="0,2,0,2"
+                        BackgroundColor="#32CD32"
+                        CornerRadius="0"
+                        HasShadow="False">
+
+                        <Label
+                            x:Name="LabelTitle"
+                            FontAttributes="Bold"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Internet Connected"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Frame>
+
+                    <ContentPresenter />
+
+                </StackLayout>
+            </ControlTemplate>
+
+            <!--  Offline Template  -->
+            <ControlTemplate x:Key="OfflineTemplate">
+                <StackLayout Spacing="0">
+
+                    <BoxView
+                        BackgroundColor="#2196F3"
+                        HeightRequest="55"
+                        IsVisible="{OnPlatform Android='False',
+                                               iOS='True'}" />
+
+                    <Frame
+                        Padding="0,2,0,2"
+                        BackgroundColor="Red"
+                        CornerRadius="0"
+                        HasShadow="False">
+
+                        <Label
+                            FontAttributes="Bold"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="No internet connection"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Frame>
+
+                    <ContentPresenter />
+
+                </StackLayout>
+            </ControlTemplate>
+
+
+             <Style TargetType="NavigationPage">
+                <!--  Doesn't change anything!  -->
+                <Setter Property="BarBackgroundColor" Value="#2196F3" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
