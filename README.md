@@ -1,6 +1,8 @@
 # XFInternetStatusSample
 
-  In this sample demo, I’m going to show you how to show the internet connection status bar on top of the all Page’s Navigation Bar from a single place.
+https://user-images.githubusercontent.com/48187633/207918686-7b6dbe24-b5bb-4eaa-ba0d-dc8181330070.mov
+
+  In this article, I’m going to show you how to check internet connection continuously in Xamarin Forms from a single place.
 
 This demo supports Android and iOS platforms.
 
